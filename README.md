@@ -1,16 +1,16 @@
 # swin_image_classification
-A complete pipeline for classifying images into predefined categories using a pre-trained Swin Transformer model, fine-tuned on a custom dataset. It includes data preparation, augmentation, model training, evaluation, and visualization of results.
+This project provides a full pipeline for image classification using a Swin Transformer model. It fine-tunes Swin on a custom dataset, the workflow includes data preparation, augmentation, model training, evaluation, and visualization of results.
 
 ## Features
-- **Data Augmentation**: Addresses class imbalance by generating additional images for underrepresented classes using Albumentations.
+- **Data Augmentation**: Uses Albumentations to balance the dataset by generating more samples for underrepresented classes.
 - **Pre-trained Model**: Utilizes a Swin Transformer (`swin_base_patch4_window7_224`) pre-trained on ImageNet, fine-tuned for the specific task.
-- **Mixed Precision Training**: Employs AMP for faster training and reduced memory usage.
-- **Early Stopping**: Monitors validation loss to prevent overfitting.
-- **Progressive Unfreezing**: Progressive Unfreezing: Gradually unfreezes layers during training to leverage pre-trained weights while fine-tuning, improving adaptation to the target dataset.
-- **Label Smoothing**: Applies label smoothing to the CrossEntropyLoss to reduce overconfidence and enhance generalization.
-- **Differential Learning Rates and Weight Decay**: Uses distinct learning rates and weight decay for the classifier head and backbone, with separate handling for bias/norm parameters to optimize training process.
-- **Comprehensive Evaluation**: Computes accuracy, precision, recall, F1-score, and generates a classification report and confusion matrix.
-- **Visualizations**: Plots training/validation curves and confusion matrix for performance insights.
+- **Mixed Precision Training**: Speeds up training and saves memory using AMP.
+- **Early Stopping**: Stops training when validation loss stops improving, helping to avoid overfitting.
+- **Progressive Unfreezing**: Gradually unfreezes layers during training to better adapt the model to the new dataset while making use of learned features.
+- **Label Smoothing**: Adds label smoothing to the loss function to reduce overconfidence and improve generalization.
+- **Differential Learning Rates and Weight Decay**: Applies different learning rates and weight decay settings to the backbone and classifier head to preserve the learned knowledge in the backbone, ensure training stability.
+- **Comprehensive Evaluation**: Reports key metrics like accuracy, precision, recall, F1-score, and includes a classification report and confusion matrix.
+- **Visualizations**: Includes plots of training and validation metrics as well as the confusion matrix to help interpret results.
 
 ## Dataset
 
