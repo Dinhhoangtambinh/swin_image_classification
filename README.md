@@ -43,12 +43,9 @@ Sample results from a run:
 
 Detailed classification reports and visualizations are generated within the notebook.
 
-## Results
+## Future Work
 
-Sample results from a run:
-- Accuracy: 0.9330
-- Precision: 0.9278
-- Recall: 0.9203
-- F1-score: 0.9226
-
-Detailed classification reports and visualizations are generated within the notebook.
+- Hyperparameter tuning for improved performance.
+- Experimentation with other transformer models.
+- Additional data augmentation techniques.
+- Exploration of alternative optimization strategies.
